@@ -1,10 +1,11 @@
 # understands having a balance that can be changed
 class Client
 
-  attr_reader :balance
+  attr_reader :balance, :statement
 
-  def initialize
+  def initialize(statement)
     @balance = 0
+    @statement = statement
   end
 
   def deposit(amount)

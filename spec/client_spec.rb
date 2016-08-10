@@ -2,12 +2,18 @@ require 'client'
 
 RSpec.describe Client do
 
-  subject(:client) { described_class.new }
+  subject(:client) { described_class.new(statement) }
+
+  let(:statement) { double(:statement) }
 
   context 'when a new client is created' do
 
     it 'they should have a starting balance of 0' do
       expect(client.balance).to eq(0)
+    end
+
+    it 'they should have a statement' do
+      expect(client.statement).to eq(statement)
     end
 
   end
