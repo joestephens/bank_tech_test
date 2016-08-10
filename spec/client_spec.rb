@@ -44,7 +44,6 @@ RSpec.describe Client do
       client.deposit(500)
 
       error = 'Insufficient funds.'
-
       expect { client.withdraw(600) }.to raise_error(RuntimeError, error)
     end
 
