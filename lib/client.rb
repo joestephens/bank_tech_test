@@ -1,3 +1,4 @@
+# understands having a balance that can be changed
 class Client
 
   attr_reader :balance
