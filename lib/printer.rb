@@ -1,9 +1,9 @@
 class Printer
 
-  def self.output(transactions)
+  def self.output(statement)
     puts("date || credit || debit || balance")
 
-    transactions.each do |transaction|
+    statement.transactions.each do |transaction|
       date = transaction[0]
       amount = sprintf('%.2f', transaction[1])
 
