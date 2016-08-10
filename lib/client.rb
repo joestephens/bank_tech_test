@@ -10,4 +10,9 @@ class Client
     @balance += amount
   end
 
+  def withdraw(amount)
+    raise(RuntimeError, 'Insufficient funds.') if amount > @balance
+    @balance -= amount
+  end
+
 end
