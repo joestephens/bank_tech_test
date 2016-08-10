@@ -1,3 +1,4 @@
+# understands storing transactions
 class Statement
 
   attr_reader :transactions
