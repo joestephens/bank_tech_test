@@ -8,7 +8,9 @@ class Statement
   end
 
   def add_transaction(time, amount)
-    @transactions << [time, amount]
+    transaction = [time, amount]
+    @transactions << transaction
+    transaction
   end
 
 end
