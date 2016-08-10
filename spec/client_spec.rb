@@ -1,6 +1,6 @@
 require 'client'
 
-describe Client do
+RSpec.describe Client do
 
   subject(:client) { described_class.new }
 
