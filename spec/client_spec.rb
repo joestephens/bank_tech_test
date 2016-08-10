@@ -16,7 +16,15 @@ RSpec.describe Client do
 
     it 'they can make a deposit' do
       client.deposit(1000)
+
       expect(client.balance).to eq(1000)
+    end
+
+    it 'they can make a withdrawal' do
+      client.deposit(1000)
+      client.withdraw(750)
+
+      expect(client.balance).to eq(250)
     end
 
   end
