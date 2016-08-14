@@ -19,7 +19,7 @@ RSpec.describe Statement do
       statement.add_transaction(now, 1000)
       expect(statement.transactions).to include([now, 1000])
     end
-    
+
   end
 
 end

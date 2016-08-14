@@ -14,7 +14,7 @@ class Client
   end
 
   def withdraw(amount)
-    raise(RuntimeError, 'Insufficient funds.') if amount > @balance
+    raise(RuntimeError, 'Insufficient funds.') if enough_money?(amount)
     @balance -= amount
     add_to_statement(amount)
   end
@@ -23,6 +23,10 @@ class Client
 
   def add_to_statement(amount)
     @statement.add_transaction(Time.now, amount)
+  end
+
+  def enough_money?(amount)
+    amount > @balance
   end
 
 end

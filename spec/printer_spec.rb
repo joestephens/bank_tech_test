@@ -22,13 +22,13 @@ RSpec.describe Printer do
       expect { printer.output(statement) }.to output(output).to_stdout
     end
 
-    it 'shows 1 credit and 1 debit transaction in order' do
+    it 'shows 1 credit and 1 debit transaction in date order' do
       transaction = [
         [Time.new(1992, 5, 17), 1000],
         [Time.new(1992, 5, 18), -1000]
       ]
-      
-      output1 = "18/05/1992 ||  || 1000.00 || 0.00\n"
+
+      output1 = "18/05/1992 || || 1000.00 || 0.00\n"
       output2 = "17/05/1992 || 1000.00 || || 1000.00\n"
       output = "#{headers}#{output1}#{output2}"
 
